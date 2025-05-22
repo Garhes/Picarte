@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../Css/login.css">
+    <title>FORMULARIO DE REGISTRO E INICIO SESIÓN</title>
+</head>
+<body>
+    
+    <div class="container-form register">
+        <div class="information">
+            <div class="info-childs">
+                <h2>Bienvenido</h2>
+                <p>Para unirte a nuestra comunidad por favor Inicia Sesión con tus datos</p>
+                <input type="button" value="Iniciar Sesión" id="sign-in">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Crear una Cuenta</h2>
+                <div class="icons">
+                    <!-- Google -->
+                    <a href="https://accounts.google.com/signin" target="_blank">
+                    <i class='bx bxl-google'></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="https://twitter.com/login" target="_blank">
+                    <i class='bx bxl-twitter'></i>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/login/" target="_blank">
+                    <i class='bx bxl-facebook'></i>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com/login" target="_blank">
+                    <i class='bx bxl-github'></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/login" target="_blank">
+                    <i class='bx bxl-linkedin'></i>
+                    </a>
+                </div>
+                <p>o usa tu email para registrarte</p>
+                <form class="form form-register"  action="../php/insertar.php" method="post"> 
+                    <div>
+                        <label>
+                            <i class='bx bx-user' ></i>
+                            <input id="R_Usuario" type="text" placeholder="Nombre Usuario" name="R_Usuario" required>
+                        </label>
+                    </div>
+                    <div>
+                        <label >
+                            <i class='bx bx-envelope' ></i>
+                            <input id="R_CorreoElectronico" type="email" placeholder="Correo Electronico" name="R_CorreoElectronico" required>
+                        </label>
+                    </div>
+                <div>
+                        <label>
+                            <i class='bx bx-lock-alt' ></i>
+                            <input id="R_Password"   type="password" placeholder="Password" name="R_Password" required minlength="12" pattern="^(?=.*[!@#$%^&*()_+\-=\[\]{};':\"title="Debe tener al menos 12 caracteres y un carácter especial">
+                        </label>
+                </div>         
+                    <input type="submit" name="submit" value="Grabar">  
+                    <div class="alerta-error">Todos los campos son obligatorios</div>
+                    <div class="alerta-exito">Te registraste correctamente</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-form login hide">
+        <div class="information">
+            <div class="info-childs">
+                <h2>¡¡Bienvenido nuevamente!!</h2>
+                <p>Para unirte a nuestra comunidad por favor Inicia Sesión con tus datos</p>
+                <input type="button" value="Registrarse" id="sign-up">
+            </div>
+        </div>
+        <div class="form-information">
+            <div class="form-information-childs">
+                <h2>Iniciar Sesión</h2>
+                <div class="icons">
+                    <!-- Google -->
+                    <a href="https://accounts.google.com/signin" target="_blank">
+                    <i class='bx bxl-google'></i>
+                    </a>
+                    <!-- Twitter -->
+                    <a href="https://twitter.com/login" target="_blank">
+                    <i class='bx bxl-twitter'></i>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/login/" target="_blank">
+                    <i class='bx bxl-facebook'></i>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com/login" target="_blank">
+                    <i class='bx bxl-github'></i>
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/login" target="_blank">
+                    <i class='bx bxl-linkedin'></i>
+                    </a>
+                </div>
+                <p>o Iniciar Sesión con una cuenta</p>
+                <form class="form form-login" action="../php/login.php" method="post">
+                    <div>
+                        <label >
+                            <i class='bx bx-envelope' ></i>
+                            <input id="L_CorreoElectronico" type="email" placeholder="Correo Electronico" name="L_CorreoElectronico" required >
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                            <i class='bx bx-lock-alt' ></i>
+                            <input id="L_Password" type="password" placeholder="Password" name="L_Password" required > 
+                        </label>
+                    </div>
+                    <input type="submit" name="submit" value="Grabar">  
+                    <div class="alerta-error">Todos los campos son obligatorios</div>
+                    <div class="alerta-exito">Iniciaste sesión correctamente</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script src="../Js/script.js"></script>
+<!--     <script src="js/register.js" type="module"></script>
+    <script src="js/iffe_login.js"></script> 
+    <script src="js/login_modulo.js" type="module"></script>-->
+</body>
+</html>
+

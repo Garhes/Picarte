@@ -1,0 +1,922 @@
+/* Reset y corrección de márgenes y paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-attachment: fixed;
+    background-repeat: no-repeat;   /* No repetir la imagen */
+    background-size: cover;         /* Que cubra toda la pantalla */
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    background-color: #000;
+    body {
+    font-family: 'Dancing Script', cursive, Arial, sans-serif;
+}
+}
+/* Menú hamburguesa */
+.burger-nav {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: linear-gradient(135deg, hsl(0, 100%, 50%), #000000);
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+    z-index: 100; /* Asegura que esté por encima del header */
+}
+.burger-nav.show {
+    display: block;
+}
+
+.burger-nav ol {
+    padding: 8px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.burger-nav ol a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(255, 253, 253);
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    display: block; /* Asegura que se muestre */
+}
+
+
+.header-container {
+    position: relative;
+    width: 100%;
+    background-color: #000000;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fffefe;
+    font-family: cursive;
+    font-weight: bold;  
+    text-align: center;
+    margin: 20px 0;
+    padding: 0 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    left: 0%;
+}
+
+.header-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.picarte-titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+    line-height: 1;
+}
+
+.logo-header {
+    width: 60px;   /* Ajusta el tamaño que desees */
+    height: auto;
+    border-radius: 0%;
+    margin-right: 20px;
+}
+
+/*
+.logo-fondo {
+    background-image: url('../Img/header/head.PNG');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 120px; 
+    display: flex;
+    align-items: center;
+    gap: 20px;
+} */
+
+img {
+    width: 100%;      /* Hace que la imagen sea responsiva dentro de su contenedor */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+img:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+}
+
+/* Barra de navegación */
+.menu {
+    max-width: 1000px;
+    margin: 0 auto;
+    transition: all 0.3s ease-in-out;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: cursive;
+    padding: 10px;
+}
+
+nav ul li a::before {
+    content: "";
+    width: 0;
+    height: 5px;
+    background: rgb(243, 147, 78);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+    padding: 80px 0;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-links {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-links h4 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid yellow;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-links ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    display: block;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: aqua;
+    padding-left: 6px;
+}
+
+.social-link a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgb(135, 192, 184);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.social-link a:hover {
+    background-color: aqua;
+}
+
+.footer .derecho {
+    background-color: #263442;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Barra de navegación principal */
+#header {
+    background-image: url('../Img/header/2.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 400px; /* O el alto que prefieras */
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    display: block;
+}
+
+
+
+.slider {
+    width: 80%; /* Cambia de 40% a 80% o prueba con 100% */
+    max-height: 450px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(255, 251, 0, 0.1);
+}
+.slides {
+    display: flex;
+    transition: transform 0.8s ease-in-out; /* Suaviza el cambio */
+}
+
+
+.slide {
+    min-width: 100%;
+}
+
+.slider img {
+    width: 100%;
+    height: 400px;      /* O el alto que prefieras, por ejemplo 450px */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* Botones de navegación */
+.prev, .next {
+    position: absolute;
+    top: 50%;  /* Los centra verticalmente */
+    transform: translateY(-50%); /* Ajusta el centrado */
+    z-index: 10; /* Asegura que estén por encima de las imágenes */
+}
+
+
+.prev:hover, .next:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.contenedor-slider-texto {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between; /* Espacia los elementos */
+    gap: 20px; /* Espacio entre el slider y el texto */
+}
+.texto p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #000000;
+}
+
+.texto {
+    width: 45%;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.8;
+    color: rgb(255, 251, 0);
+}
+
+.mision-vision {
+    max-width: 800px; /* Limita el ancho para mejorar la legibilidad */
+    margin: 40px auto; /* Centra el contenido */
+    padding: 20px;
+    background-color: #f8f8f8; /* Fondo suave */
+    border-left: 5px solid #ffcc00; /* Barra lateral decorativa */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.mision-vision h2 {
+    font-size: 24px;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mision-vision p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center; /* Alinea verticalmente */
+    justify-content: space-between; /* Separa los elementos */
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    gap: 20px; /* Agrega separación entre imagen y texto */
+}
+
+.imagen {
+    width: 50%; /* Tamaño de la imagen */
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.texto {
+    width: 45%; /* Ajusta el ancho del texto */
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.texto h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffcc00; /* Línea decorativa */
+    display: inline-block;
+}
+
+.texto p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.contenedor-slider-texto {
+    display: flex;
+    align-items: center; /* Asegura alineación vertical */
+    justify-content: space-between; /* Separa imagen y texto */
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    gap: 30px; /* Aumenta separación entre imagen y texto */
+}
+.image-container {
+    display: flex;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    gap: 15px;
+    padding: 20px;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+}
+
+.image-container img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    scroll-snap-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+/* Botón "Ver Menú" */
+.menu-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 25px;
+    font-size: 18px;
+    background: #f51818;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.menu-btn:hover {
+    background: #FF4500;
+    color: white;
+}
+/* MODAL (INICIALMENTE OCULTO) */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.buy-button {
+    background-color: rgb(255, 0, 0);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+ /* Botón flotante */
+.boton-carrito-flotante {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;      /* Cambiado de right a left */
+    width: 60px;
+    height: 60px;
+    background: #ffc107;
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+.boton-carrito-flotante:hover {
+    background: #ff9800;
+    transform: scale(1.08);
+}
+.boton-carrito-flotante #contador {
+    background: #e53935;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 7px;
+    font-size: 14px;
+    margin-left: 4px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+button.comprar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button {
+    color: #000000;
+    font: 13.3333px Arial;
+    background: white;
+}
+
+
+  /* Estilo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-contenido {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.3);
+}
+
+.cerrar {
+    color: red;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.item-carrito button {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+span {
+    font-weight: bold;
+    color: #000000;
+}
+
+/* Contenedor del menú */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+/* Estilos de cada producto */
+.menu-item {
+    width: 200px;
+    text-align: center;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.menu-item h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+.menu-item p {
+    font-size: 16px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Encabezado del mapa */
+.map-section h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+/* Descripción del mapa */
+.map-section p {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Contenedor del mapa */
+.map-container {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el iframe de Google Maps */
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Centra los iconos */
+    gap: 15px; /* Espacio entre los iconos */
+    margin-top: 10px;
+    align-items: center; /* Alinea verticalmente */
+}
+
+.social-links img {
+    width: 40px; /* Ajusta el tamaño de los iconos */
+    height: 40px;
+    object-fit: cover; /* Evita que se deformen */
+    border-radius: 50%; /* Opcional: Hace que los iconos sean redondos */
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-links img:hover {
+    transform: scale(1.2); /* Efecto al pasar el mouse */
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;  /* Distancia desde la parte inferior */
+    right: 20px;   /* Distancia desde la derecha */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.whatsapp-button img {
+    width: 60px;   /* Tamaño del ícono */
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%; /* Opción para hacerlo redondo */
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp-button img:hover {
+    transform: scale(1.2); /* Efecto al pasar el mouse */
+}
+
+/* Modal para reserva de mesa */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    overflow: auto;
+    background: rgba(0,0,0,0.5);
+}
+.modal-contenido {
+    background: #fff;
+    margin: 5% auto;
+    padding: 20px 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+.cerrar {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+.btn-reservar {
+    background: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+.btn-reservar:hover {
+    background: #ff9800;
+}
+
+.mapa-mesas {
+    text-align: center;
+    margin: 30px 0;
+}
+.mesas {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+.mesa-btn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    background: #000000;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.2s, border 0.2s;
+}
+.mesa-btn:hover {
+    background: #ff0101;
+    border-color: #ffffff;
+}
+
+.botones-menu-reserva {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    color: white;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.center {
+    display: block;
+    text-align: -webkit-center;
+    unicode-bidi: isolate;
+    color: white;
+}
+
+h1 {
+    color: #ffffff; /* Cambia este valor por el color que prefieras */
+    text-align: center;
+}
+
+.ubicacion-titulo {
+    color: #ffffff; /* Cambia este valor por el color que prefieras */
+    text-align: center;
+}
+
+.ubicacion-descripcion {
+    color: #fff; /* Cambia este valor por el color que prefieras */
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.mapas-doble {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.mapas-doble .map-container {
+    flex: 1 1 350px;
+    min-width: 300px;
+    max-width: 500px;
+    height: 300px;
+}
+.mapas-doble iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.btn-descargar-menu {
+    display: inline-block;
+    background: #000000;
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 20px auto;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 2px 8px rgba(30,64,175,0.10);
+}
+.btn-descargar-menu:hover {
+    background: #ff0000;
+    color: #1e293b;
+}
+
+.logo-picarte {
+    height: 30px;   /* O prueba con 25px */
+    width: auto;
+    display: block;
+}
+
+hr {
+border: #000;
+}
+
+.barra-superior {
+    width: 100%;
+    background: #000000;
+    padding: 20px 0 0 0;
+    position: relative;
+    z-index: 10;
+}
+
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre logo y texto */
+}
+
+.picarte-titulo,
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Dancing Script', cursive, Arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+p,
+.menu-item p,
+.texto,
+.ubicacion-descripcion,
+.mision-vision p {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #fff;
+}
+
+/* Responsive para tablets y móviles */
+@media (max-width: 900px) {
+    .header-flex, .logo-titulo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .image-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .header-flex, .logo-titulo {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .picarte-titulo {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+    .image-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .menu-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .btn-descargar-menu,
+    .botones-menu-reserva button {
+        width: 100%;
+        font-size: 1em;
+    }
+    .modal-content, .modal-contenido {
+        width: 95vw;
+        min-width: unset;
+        max-width: 100vw;
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Finalizar Compra</title>
+<style>
+    body {
+    font-family: Arial;
+    padding: 20px;
+    background: #f2f2f2;
+    }
+    .formulario {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ccc;
+    max-width: 500px;
+    margin: auto;
+    }
+    h2 {
+    text-align: center;
+    }
+    input, label {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    }
+    .resumen {
+    background: #eef;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 15px;
+    }
+    button {
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="formulario">
+    <h2>📝 Finalizar Compra</h2>
+
+    <form id="formulario">
+    <label>Nombre:</label>
+    <input type="text" required>
+
+    <label>Cédula:</label>
+    <input type="number" required>
+
+    <label>Teléfono:</label>
+    <input type="tel" required>
+
+    <label>Dirección:</label>
+    <input type="text" required>
+
+    <div class="resumen">
+        <h3>🧾 Tu Pedido:</h3>
+        <div id="resumen-pedido"></div>
+        <p><strong>Total:</strong> $<span id="total-final"></span></p>
+    </div>
+
+    <button type="submit">Confirmar Compra</button>
+    </form>
+</div>
+
+<script>
+    // Recuperar carrito desde localStorage
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const total = localStorage.getItem("total") || 0;
+
+    const resumenDiv = document.getElementById("resumen-pedido");
+    const totalSpan = document.getElementById("total-final");
+
+    carrito.forEach(producto => {
+    const p = document.createElement("p");
+    p.textContent = `${producto.nombre} - $${producto.precio.toLocaleString()}`;
+    resumenDiv.appendChild(p);
+    });
+
+    totalSpan.textContent = parseInt(total).toLocaleString();
+
+    // Al enviar formulario
+    document.getElementById("formulario").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("¡Compra realizada con éxito! 🥳");
+
+      // Limpiar carrito al terminar
+    localStorage.removeItem("carrito");
+    localStorage.removeItem("total");
+
+    window.location.href = "index.html";
+    });
+</script>
+
+</body>
+</html>

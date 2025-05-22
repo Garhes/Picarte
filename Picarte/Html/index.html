@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <title>Picarte</title>
+    <link rel="icon" type="imagenes" href="../Img/Logos/Logo.png">
+    <link rel="stylesheet" type="text/css" href="../Css/index.css">
+</head> 
+<body>
+    <header>
+    <div class="barra-superior">
+        <div class="header-flex logo-fondo">
+            <div class="logo-titulo">
+                <img src="../Img/Logos/Logo.png" alt="Logo Picarte" class="logo-picarte">
+            <p class="picarte-titulo">Picarte  ⭐ ⭐ ⭐ ⭐ ⭐</p>
+            <nav>
+                <ul>
+                    <li><a href="#Inicio">Inicio</a></li>             
+                    <li><a href="#Productos">Productos</a></li>
+                    <li><a href="#SobreNosotros">Sobre Nosotros</a></li>
+                </ul>
+            </nav>
+            <div class="menu-icon">
+                ☰
+            </div>
+            <ul id="burger" class="burger-nav">
+                <ol><a href="../Html/login.html">Login</a></ol>
+                <ol><a href="../Html/domicilios.php">Domicilios</a></ol>
+            </ul>
+        </div>
+    </div>
+    </div> 
+    </header>
+
+    <header id="header"></header>
+
+    <div class="Barra_navegacion">
+        <div id="Inicio"></div>
+                <div class="menu">
+            <hr>
+            <!-- Botón flotante del carrito -->
+            <button id="boton-carrito" class="boton-carrito-flotante" onclick="abrirCarrito()">
+                🛒  
+                <span id="contador">0</span>
+            </button>   
+            <!-- Ventana Modal del Carrito -->
+            <div id="modal-carrito" class="modal">
+                <div class="modal-contenido">
+                    <span class="cerrar" onclick="cerrarCarrito()">&times;</span>
+                    <h2>🛍️ Carrito de Compras</h2>
+                    <div id="carrito-lista"></div>
+                    <p><strong>Total: </strong>$<span id="total">0</span></p>
+                    <button onclick="irAlCheckout()">Comprar</button>
+                </div>
+            </div>
+        </div>     
+    </div>
+    <h1><center>Menu 📋</center></h1>
+    <button id="descargarMenuBtn" class="btn-descargar-menu">
+        📥 Descargar Menú Picarte PDF
+    </button>
+<div id="Productos" class="image-container">
+    <img src="../Img/Menu/1.PNG" alt="Arepa Rellena">
+    <img src="../Img/Menu/2.PNG" alt="Arepa de Queso">
+    <img src="../Img/Menu/3.PNG" alt="Empanada">
+    <img src="../Img/Menu/4.PNG" alt="Bebida">
+    <img src="../Img/Menu/5.PNG" alt="Bebida">
+    <img src="../Img/Menu/6.PNG" alt="Bebida">
+    <img src="../Img/Menu/7.PNG" alt="Bebida">
+    <img src="../Img/Menu/8.PNG" alt="Arepa Rellena">
+    <img src="../Img/Menu/9.PNG" alt="Arepa de Queso">
+    <img src="../Img/Menu/10.PNG" alt="Empanada">
+    <img src="../Img/Menu/11.PNG" alt="Bebida">
+    <img src="../Img/Menu/12.PNG" alt="Bebida">
+    <img src="../Img/Menu/14.PNG" alt="Bebida">
+</div>
+
+<div class="botones-menu-reserva">
+    <button class="menu-btn" onclick="abrirMenu()">Ver Menú 🛎️</button>
+    <button id="btn-reservar" class="btn-reservar">Reservar Mesa 🪑</button>
+</div>
+
+<div id="menuModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarMenu()">&times;</span>
+        <h2>Menú de Comida</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <img src="../Img/Menu_2/1.jpeg" alt="Arepa de Huevo">
+                <h3>Burritos</h3>
+                <p>$8.000</p>
+                <button class="buy-button" onclick="redirigirPago()">Comprar 💲</button>
+                <button class="comprar" onclick="agregarAlCarrito('Burritos', 8000)">Añadir</button>
+            </div>
+            <div class="menu-item">
+                <img src="../Img/Menu_2/2.jpeg" alt="Arepa de Queso">
+                <h3>Pizza</h3>
+                <p>$7.500</p>
+                <button class="buy-button" onclick="redirigirPago()">Comprar 💲</button>
+                <button class="comprar" onclick="agregarAlCarrito('Pizza', 7500)">Añadir</button>
+            </div>
+            <div class="menu-item">
+                <img src="../Img/Menu_2/3.jpeg" alt="Empanada">
+                <h3>Hamburguersas</h3>
+                <p>$12.000</p>
+                <button class="buy-button" onclick="redirigirPago()">Comprar 💲</button>
+                <button class="comprar" onclick="agregarAlCarrito('Hamburguersas', 12000)">Añadir</button>
+            </div>
+            <div class="menu-item">
+                <img src="../Img/Menu_2/4.jpeg" alt="Bebida">
+                <h3>Platos a la carta</h3>
+                <p>$20.000</p>
+                <button class="buy-button" onclick="redirigirPago()">Comprar 💲</button>
+                <button class="comprar" onclick="agregarAlCarrito('Platos a la carta', 20000)">Añadir</button>
+            </div>
+            <div class="menu-item">
+                <img src="../Img/Menu_2/5.webp" alt="Bebida">
+                <h3>Carnes</h3>
+                <p>$20.000</p>
+                <button class="buy-button" onclick="redirigirPago()">Comprar 💲</button>
+                <button class="comprar" onclick="agregarAlCarrito('Carnes', 20000)">Añadir</button>
+            </div>
+            <div class="menu-item">
+                <img src="../Img/Menu_2/6.webp" alt="Bebida">
+                <h3>Cocteles</h3>
+                <p>$8.000</p>
+                <button class="buy-button" onclick="redirigirPago()">Comprar 💲</button>
+                <button class="comprar" onclick="agregarAlCarrito('Cocteles', 8000)">Añadir</button>
+            </div>
+            <div class="menu-item">
+                <img src="../Img/Menu_2/7.webp" alt="Bebida">
+                <h3>Bebidas</h3>
+                <p>$6.000</p>
+                <button class="buy-button" onclick="redirigirPago()">Comprar 💲</button>
+                <button class="comprar" onclick="agregarAlCarrito('Bebidas', 6000)">Añadir</button>
+            </div>
+            <div class="menu-item">
+                <img src="../Img/Menu_2/8.webp" alt="Bebida">
+                <h3>Perros Calientes</h3>
+                <p>$8.000</p>
+                <button class="buy-button" onclick="redirigirPago()">Comprar 💲</button>
+                <button class="comprar" onclick="agregarAlCarrito('Perros Calientes', 8000)">Añadir</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="mapaMesas" class="mapa-mesas" style="display:none;">
+    <h2>Selecciona tu mesa</h2>
+    <div class="mesas">
+        <button class="mesa-btn" data-mesa="1">Mesa 1</button>
+        <button class="mesa-btn" data-mesa="2">Mesa 2</button>
+        <button class="mesa-btn" data-mesa="3">Mesa 3</button>
+        <button class="mesa-btn" data-mesa="4">Mesa 4</button>
+        <button class="mesa-btn" data-mesa="5">Mesa 5</button>
+        <button class="mesa-btn" data-mesa="6">Mesa 6</button>
+        <button class="mesa-btn" data-mesa="7">Mesa 7</button>
+        <button class="mesa-btn" data-mesa="8">Mesa 8</button>
+        <button class="mesa-btn" data-mesa="9">Mesa 9</button>
+        <button class="mesa-btn" data-mesa="10">Mesa 10</button>
+        <button class="mesa-btn" data-mesa="11">Mesa 11</button>
+        <button class="mesa-btn" data-mesa="12">Mesa 12</button>    
+    </div>
+</div>
+
+<div id="modal-reserva" class="modal" style="display:none;">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarReserva()">&times;</span>
+        <h2>Reservar Mesa</h2>
+        <form id="form-reserva">
+            <label for="mesa">Mesa:</label>
+            <input type="text" id="mesa" name="mesa" readonly required>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="personas">Número de personas:</label>
+            <input type="number" id="personas" name="personas" min="1" max="20" required>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+            <button type="submit">Reservar</button>
+        </form>
+    </div>
+</div>
+
+    <h2 class="ubicacion-titulo">Ubicación 📍🗺️</h2>
+    <p class="ubicacion-descripcion">Tenemos dos puntos de nuestro maravilloso restaurante, estamos ubicados: Cl. 14 #18G-54, Soacha, Cundinamarca y Soacha, Cundinamarca ¡Te esperamos!</p>
+<section class="map-section">
+    <div class="mapas-doble">
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.101169553918!2d-74.21674552497566!3d4.575846042727193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9f4cbb225d27%3A0x97ed0916529a704f!2sPICARTE!5e0!3m2!1ses!2sco!4v1744207826771!5m2!1ses!2sco" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+        <div class="map-container">
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.0255791847326!2d-74.22197588986145!3d4.5894324953659345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f750073bc596b%3A0x9c30fc6957a1b0ee!2sPicarte%20Prado%20Vegas!5e0!3m2!1ses!2sco!4v1747931464764!5m2!1ses!2sco"
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+<footer  class="footer">
+    
+    <div class="mani"> 
+        <div class="footer-row">
+
+            <div id="SobreNosotros" class="footer-links">
+                
+                <h4>Compañia</h4>
+
+                <ul>
+                    <li> <a href="#">Nosotros</a></li>
+                    <li> <a href="#">Nuestros productos</a></li>
+                    <li> <a href="#">Politicas de privacidad</a></li>
+                </ul>
+
+
+            </div>
+
+            <div class="footer-links">
+                
+                <h4>Ayuda</h4>
+
+                <ul>
+                    <li> <a href="../Html/form.html">Contacto Desarrollador</a></li>
+                </ul>
+
+
+            </div>
+
+            <div class="footer-links">
+                
+                <h4>Tienda</h4>
+
+                <ul>
+                    <li> <a href="#">Burritos</a></li>
+                    <li> <a href="#">Pizza</a></li>
+                    <li> <a href="#">Hamburguersas</a></li>
+                    <li> <a href="#">Platos a la carta</a></li>
+                    <li> <a href="#">Carnes</a></li>
+                    <li> <a href="#">Cocteles</a></li>
+                    <li> <a href="#">Bebidas</a></li>
+                    <li> <a href="#">Perros Calientes</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Síguenos</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/PicarteOficial/?locale=es_LA" target="_blank">
+                        <img src="../Img/facebook.webp" alt="Facebook">
+                    </a>
+                    <a href="https://www.instagram.com/picarte.angus/" target="_blank">
+                        <img src="../Img/ig.webp" alt="Instagram">
+                    </a>
+                    <a href="https://www.waze.com/es-419/live-map/directions/co/cundinamarca/soacha/picarte?to=place.ChIJJ10iu0yfP44RT3CaUhYJ7Zc" target="_blank">
+                        <img src="../Img/waze.png" alt="Twitter">
+                    </a>
+                </div>
+            </div>            
+        </div>
+    </div>
+    <div class="derecho">
+        <small>&copy;2025 <b>Johan, Nicolas, Mina</b> - Todos los derechos reservados</small>
+    </div>
+</footer>
+    <script src="../Js/burguer.js"></script>
+    <script src="../Js/carga.js"></script>
+    <script src="../Js/slider.js"></script>
+    <script src="../Js/interfaz.js"></script>
+    <script src="../Js/interfaz2.js"></script>
+    <script src="../Js/Carrito_compras.js"></script>
+    <script src="../Js/reservar.js"></script>    
+    <script src="../Js/descargar.js"></script>
+    <a href="https://wa.me/3184896273" class="whatsapp-button" target="_blank">
+        <img src="../Img/W.webp" alt="WhatsApp">
+    </a>
+</body>
+</html>

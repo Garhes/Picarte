@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pasarela de Pago</title>
+    <link rel="stylesheet" type="text/css" href="../Css/pago.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Elige tu método de pago</h2>
+        <button class="payment-option" onclick="redirigirPago('pse')">PSE</button>
+        <button class="payment-option" onclick="redirigirPago('nequi')">Nequi</button>
+        <button class="payment-option" onclick="redirigirPago('daviplata')">Daviplata</button>
+        <button class="payment-option" onclick="redirigirPago('paypal')">PayPal</button>
+        <button class="payment-option" onclick="redirigirPago('tarjeta')">Tarjeta Débito/Crédito</button>
+    </div>
+    <script src="../Js/pago.js"></script>
+</body>
+</html>
